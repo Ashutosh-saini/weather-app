@@ -7,7 +7,7 @@ from django.http import Http404
 def index(request):
     city = request.GET.get('enteredCity')
 
-    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=12e3fc145f8df573ea3109d1d0d368d8'.format(city)
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=your_api_key'.format(city)
 
     try:
         city_weather = requests.get(url.format(city)).json() 
